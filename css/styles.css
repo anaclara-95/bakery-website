@@ -170,7 +170,7 @@ img {
   .nav__menu {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     background-color: hsla( 0, 0%, 6%, .2);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -193,4 +193,36 @@ img {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   transition: color .4s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+
+}
+
+.nav__close, .nav__img-1, .nav__img-2 {
+  position: absolute;
+}
+
+.nav__close {
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.nav__img-1{
+  width: 80px;
+  top: 11rem;
+  right: .75rem;
+}
+
+.nav__img-2 {
+  width: 60px;
+  top: 28rem;
+  left: 6rem;
+}
+
+/*show menu style*/
+
+.show-menu{
+  right: 0;
 }
