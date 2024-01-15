@@ -164,7 +164,7 @@ img {
   cursor:pointer;
 }
 
-/* Navigation for mobile devices */ 
+/*********** Navigation for mobile devices ***********/ 
 
 @media screen and (max-width: 1150px) {
   .nav__menu {
@@ -221,13 +221,13 @@ img {
   left: 6rem;
 }
 
-/*show menu style*/
+/*********** show menu style ***********/
 
 .show-menu{
   right: 0;
 }
 
-/* Add blur header */
+/************ Add blur header ********/
 .blur-header::after{
   content:'';
   position: absolute;
@@ -243,7 +243,7 @@ img {
 
 
 
-/* Home */
+/************ Home *************/
 
 .home {
   position: relative;
@@ -344,7 +344,7 @@ img {
   color: var(--first-color);
 }
 
-/* Button */
+/*********** Button ***********/
 
 .button {
   display: inline-flex;
@@ -361,7 +361,7 @@ img {
 
 }
 
-/* New */
+/************ New **************/
 .new__container {
   padding-top: 1.5rem;
   row-gap: 3.5rem;
@@ -402,4 +402,35 @@ img {
 .new__button {
   justify-self: center;
 
+}
+
+
+/******* ABOUT ********/
+
+.about__container {
+  row-gap: 4rem;
+}
+
+.about__data {
+  position: relative;
+  text-align: center;
+
+}
+
+.about__description {
+  margin-bottom: 3rem;
+
+}
+
+.about__bread {
+  width: 60px;
+  position: absolute;
+  bottom: 1ren;
+  right: 0;
+}
+
+.about__img {
+  width: 320px;
+  justify-self: center;
+  
 }
