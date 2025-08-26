@@ -66,16 +66,17 @@ const scrollActive = () => {
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop - 58,
-        sectionId = current.getAttribute('id'),
-        sectionClass = document.querySelector('.nav__menu a [href*=' + sectionId +']' )
+              sectionTop = current.offsetTop - 58,
+              sectionId = current.getAttribute('id'),
+              sectionsClass = document.querySelector('.nav__list a[href*=' + sectionId + ']')
 
-    if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-        sectionClass.classList.add('active-link')
-    } else {
-        sectionClass.classList.remove('active-link')
-    }
-
+        if (sectionsClass) { // ✅ chequeo para que no sea null
+            if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+                sectionsClass.classList.add('active-link')
+            } else {
+                sectionsClass.classList.remove('active-link')
+            }
+        }
     })
 }
 
