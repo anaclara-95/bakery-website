@@ -20,7 +20,7 @@ if(nav_close){
  });
 };
 
-//**************** REMOVE MENU MOVILE ****************/
+//**************** REMOVE MENU MOBILE ****************/
 
 const navLink = document.querySelectorAll('.nav__link');
 
