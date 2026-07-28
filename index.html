@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,25 +34,31 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+              <a href="#home"  class="nav__link" data-i18n="nav_home">Home</a>
             </li>
 
             <li class="nav__item">
-              <a href="#new" class="nav__link">News</a>
+              <a href="#new"   class="nav__link" data-i18n="nav_new">News</a>
             </li>
 
             <li class="nav__item">
-              <a href="#about" class="nav__link">About Us</a>
+              <a href="#about" class="nav__link" data-i18n="nav_about">About Us</a>
             </li>
 
             <li class="nav__item">
-              <a href="#fav" class="nav__link">Favorites</a>
+              <a href="#fav"   class="nav__link" data-i18n="nav_fav">Favorites</a>
             </li>
 
             <li class="nav__item">
-              <a href="#visit" class="nav__link">Location</a>
+              <a href="#visit" class="nav__link" data-i18n="nav_location">Location</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="recipes.html" class="nav__link" data-i18n="nav_recipes">Recetario</a>
+            
             </li>
           </ul>
+
 
           <!----------------------------------------------------------Close button--------------------------------------------------->
 
@@ -69,6 +75,35 @@
         <div class="nav__toggle" id="nav-toggle">
           <i class="ri-menu-fill"></i>
         </div>
+
+        <button
+          id="langToggle"
+          onclick="toggleLang()"
+          style="
+            background: transparent;
+            border: 1px solid hsl(28, 88%, 62%);
+            color: hsl(28, 88%, 62%);
+            font-family: &quot;Montserrat&quot;, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.7rem;
+            cursor: pointer;
+            letter-spacing: 0.08em;
+            transition:
+              background 0.3s,
+              color 0.3s;
+          "
+          onmouseover="
+            this.style.background = 'hsl(28,88%,62%)';
+            this.style.color = 'hsl(0,0%,6%)';
+          "
+          onmouseout="
+            this.style.background = 'transparent';
+            this.style.color = 'hsl(28,88%,62%)';
+          "
+        >
+          EN
+        </button>
       </nav>
     </header>
 
@@ -82,11 +117,9 @@
         <div class="home__shadow"></div>
         <div class="home__container container grid">
           <div class="home__data">
-            <h1 class="home__title">
-              Select the best <br />
-              quality breads
-            </h1>
-            <a href="#" class="button">Select breads</a>
+            <h1 class="home__title" data-i18n="hero_title">Select the best <br /> quality breads</h1>
+            <a href="#" class="button" data-i18n="hero_btn">Select breads</a>
+            <a href="recipes.html" class="button" data-i18n="hero_recipes">Ver Recetario</a>
             <img src="./assets/bread-1.png" alt="image" class="home__bread" />
           </div>
 
@@ -123,44 +156,56 @@
       <!----------------------------------------------------------NEWS----------------------------------------------------------------->
 
       <section class="new section" id="new">
-        <h2 class="section__title">New breads</h2>
+        <h2 class="section__title" data-i18n="new_title">New breads</h2>
         <div class="new__container container grid">
           <div class="new__content grid">
             <article class="new__card">
               <div class="new__data">
-                <h2 class="new__title">Rye Bread</h2>
-                <p class="new__description">
+                <h2 class="new__title" data-i18n="new_card1_title">Rye Bread</h2>
+                <p class="new__description" data-i18n="new_card1_desc">
                   Baked with healthy, gluten-free <br />
                   sourdough for good nutrition.
                 </p>
               </div>
-              <img src="./assets/new-bread-1.png" alt="image" class="new__img" />
+              <img
+                src="./assets/new-bread-1.png"
+                alt="image"
+                class="new__img"
+              />
             </article>
 
             <article class="new__card">
               <div class="new__data">
-                <h2 class="new__title">Whole Grain Bread</h2>
-                <p class="new__description">
+                <h2 class="new__title" data-i18n="new_card2_title">Whole Grain Bread</h2>
+                <p class="new__description" data-i18n="new_card2_desc">
                   Crispy and homemade prepared <br />
                   from organic yeast-free flour.
                 </p>
               </div>
-              <img src="./assets/new-bread-2.png" alt="image" class="new__img" />
+              <img
+                src="./assets/new-bread-2.png"
+                alt="image"
+                class="new__img"
+              />
             </article>
 
             <article class="new__card">
               <div class="new__data">
-                <h2 class="new__title">Multigrain Bread</h2>
-                <p class="new__description">
+                <h2 class="new__title" data-i18n="new_card3_title">Multigrain Bread</h2>
+                <p class="new__description" data-i18n="new_card3_desc">
                   Tasty and made with different <br />
                   natural grains form the countryside.
                 </p>
               </div>
-              <img src="./assets/new-bread-3.png" alt="image" class="new__img" />
+              <img
+                src="./assets/new-bread-3.png"
+                alt="image"
+                class="new__img"
+              />
             </article>
           </div>
 
-          <a href="" class="new__button button">See more breads</a>
+          <a href="" class="new__button button" data-i18n="new_more">See more breads</a>
         </div>
       </section>
 
@@ -169,14 +214,14 @@
       <section class="about section" id="about">
         <div class="about__container container grid">
           <div class="about__data">
-            <h2 class="section__title">About Us</h2>
-            <p class="about__description">
+            <h2 class="section__title" data-i18n="about_title">About Us</h2>
+            <p class="about__description" data-i18n="about_desc">
               We prepare all types of bread that are made at home, maintaining
               the tradition of using only the best ingredients made with local
               products whenever possible. We have an extensive line of freshly
               prepared bakery and coffee products.
             </p>
-            <a href="#" class="button">Know More</a>
+            <a href="#" class="button" data-i18n="about_btn">Know More</a>
             <img src="./assets/bread-2.png" alt="image" class="about__bread" />
           </div>
           <img src="./assets/about-bread.png" alt="" class="about__img" />
@@ -185,7 +230,7 @@
 
       <!-------------------------------------------------------------FAVORITES--------------------------------------------------->
       <section class="fav-section" id="fav">
-        <h2 class="section__title">Customer Favorites</h2>
+        <h2 class="section__title" data-i18n="fav_title">Customer Favorites</h2>
 
         <div class="favorite__container container grid">
           <article class="favorite__card">
@@ -196,8 +241,8 @@
             />
 
             <div class="favorite__data">
-              <h2 class="favorite__title">Whole Grain</h2>
-              <span class="favorite__subtitle">Bread</span>
+              <h2 class="favorite__title" data-i18n="b1">Whole Grain</h2>
+              
               <h3 class="favorite__price">$6.00</h3>
             </div>
 
@@ -214,8 +259,8 @@
             />
 
             <div class="favorite__data">
-              <h2 class="favorite__title">Rye</h2>
-              <span class="favorite__subtitle">Bread</span>
+              <h2 class="favorite__title" data-i18n="b2">Rye</h2>
+              
               <h3 class="favorite__price">$8.00</h3>
             </div>
             <button class="favorite__button button">
@@ -231,8 +276,8 @@
             />
 
             <div class="favorite__data">
-              <h2 class="favorite__title">Wheat</h2>
-              <span class="favorite__subtitle">Bread</span>
+              <h2 class="favorite__title" data-i18n="b3">Wheat</h2>
+              
               <h3 class="favorite__price">$3.00</h3>
             </div>
             <button class="favorite__button button">
@@ -248,8 +293,8 @@
             />
 
             <div class="favorite__data">
-              <h2 class="favorite__title">Multigrain</h2>
-              <span class="favorite__subtitle">Bread</span>
+              <h2 class="favorite__title" data-i18n="b4">Multigrain</h2>
+              
               <h3 class="favorite__price">$5.00</h3>
             </div>
             <button class="favorite__button button">
@@ -265,8 +310,8 @@
             />
 
             <div class="favorite__data">
-              <h2 class="favorite__title">Sourdough</h2>
-              <span class="favorite__subtitle">Bread</span>
+              <h2 class="favorite__title" data-i18n="b5">Sourdough</h2>
+              
               <h3 class="favorite__price">$7.00</h3>
             </div>
             <button class="favorite__button button">
@@ -282,8 +327,8 @@
             />
 
             <div class="favorite__data">
-              <h2 class="favorite__title">French</h2>
-              <span class="favorite__subtitle">Bread</span>
+              <h2 class="favorite__title" data-i18n="b6">French</h2>
+              
               <h3 class="favorite__price">$3.00</h3>
             </div>
             <button class="favorite__button button">
@@ -301,13 +346,13 @@
           <div class="visit__shadow"></div>
           <div class="visit__content container grid">
             <div class="visit__data">
-              <h2 class="section__title">Visit Us</h2>
+              <h2 class="section__title" data-i18n="visit_title">Visit Us</h2>
 
-              <p class="visit__description">
+              <p class="visit__description" data-i18n="visit_desc">
                 Discover the best bread, we look forward to your visit.
               </p>
 
-              <a href="#" class="button">See Location</a>
+              <a href="#" class="button" data-i18n="visit_btn">See Location</a>
             </div>
           </div>
         </div>
@@ -319,31 +364,31 @@
       <div class="footer__container container grid">
         <div>
           <a href="#" class="footer__logo">Bakery</a>
-          <p class="footer__description">
+          <p class="footer__description" data-i18n="footer_desc">
             We make the best bread <br />
             in the city.
           </p>
         </div>
         <div class="footer__content grid">
           <div>
-            <h3 class="footer__title">Address</h3>
+            <h3 class="footer__title" data-i18n="footer_addr">Address</h3>
 
             <ul class="footer__list">
               <li>
-                <address class="footer__info"
-                  >AV. The Sun #321 <br />
-                  Lima Peru</address
-                >
+                <address class="footer__info">
+                  Av. 12323 <br />
+                  Santa Fe Argentina
+                </address>
               </li>
 
               <li>
-                <address class="footer__info"> 9AM - 11PM</address>
+                <address class="footer__info">9AM - 11PM</address>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 class="footer__title">Contact Me</h3>
+            <h3 class="footer__title" data-i18n="footer_contact">Contact Me</h3>
 
             <ul class="footer__list">
               <li>
@@ -357,7 +402,7 @@
           </div>
 
           <div>
-            <h3 class="footer__title">Follow Us</h3>
+            <h3 class="footer__title" data-i18n="footer_follow">Follow Us</h3>
             <div class="footer__social">
               <a href=" https://www.facebook.com/" target="__blank">
                 <i class="ri-facebook-box-fill"></i>
@@ -377,9 +422,10 @@
         <img src="./assets/bread-4.png" alt="image" class="footer__img-1" />
         <img src="./assets/bread-3.png" alt="image" class="footer__img-2" />
       </div>
-      <span class="footer__copy"> &#169; All Rights Reserved By FsTailSolutions </span>
+      <span class="footer__copy">
+        &#169; All Rights Reserved By FsTailSolutions
+      </span>
     </footer>
-
 
     <!----------------------------------------------------------------SCROLL UP-------------------------------------------------------------------------------->
 
@@ -387,12 +433,9 @@
       <i class="ri-arrow-up-line"></i>
     </a>
 
-
-
-
-
   </body>
+
+  <script src="./js/lang.js"></script>
   <script src="./js/scrollreveal.min.js"></script>
   <script src="./js/main.js"></script>
-  
 </html>
