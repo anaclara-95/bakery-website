@@ -45,9 +45,9 @@
               <a href="#about" class="nav__link" data-i18n="nav_about">About Us</a>
             </li>
 
-            <li class="nav__item">
+            <!-- <li class="nav__item">
               <a href="#fav"   class="nav__link" data-i18n="nav_fav">Favorites</a>
-            </li>
+            </li> -->
 
             <li class="nav__item">
               <a href="#visit" class="nav__link" data-i18n="nav_location">Location</a>
@@ -71,12 +71,7 @@
         </div>
 
         <!-----------------------------------------------------------Toggle Button-------------------------------------------------->
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-fill"></i>
-        </div>
-
-        <button
+ <button
           id="langToggle"
           onclick="toggleLang()"
           style="
@@ -104,6 +99,11 @@
         >
           EN
         </button>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-fill"></i>
+        </div>
+
+       
       </nav>
     </header>
 
@@ -229,7 +229,7 @@
       </section>
 
       <!-------------------------------------------------------------FAVORITES--------------------------------------------------->
-      <section class="fav-section" id="fav">
+      <!-- <section class="fav-section" id="fav">
         <h2 class="section__title" data-i18n="fav_title">Customer Favorites</h2>
 
         <div class="favorite__container container grid">
@@ -336,7 +336,7 @@
             </button>
           </article>
         </div>
-      </section>
+      </section> -->
 
       <!---------------------------------------------------------------VISIT-------------------------------------------------------->
 
@@ -363,6 +363,7 @@
     <footer class="footer">
       <div class="footer__container container grid">
         <div>
+        <!--*Add img logo backery  -->
           <a href="#" class="footer__logo">Bakery</a>
           <p class="footer__description" data-i18n="footer_desc">
             We make the best bread <br />

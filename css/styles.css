@@ -167,11 +167,15 @@ img {
 /*********************************************Navigation for mobile devices *****************************************************/ 
 
 @media screen and (max-width: 1150px) {
+  .header{
+    position: inherit;
+  }
   .nav__menu {
     position: fixed;
     top: 0;
     right: -100%;
-    background-color: hsla( 0, 0%, 6%, .2);
+    z-index: 1000;
+    background-color: hsla( 0, 0%, 6%, .9);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     width: 80%;
@@ -339,6 +343,7 @@ img {
 }
 
 .home__social a {
+  z-index: 1000;
   color:var(--title-color);
   font-size: 1.5rem;
   transition: color .4s;
@@ -355,7 +360,7 @@ img {
   background-color: var(--first-color);
   color: var(--black-color);
   font-weight: var(--font-semi-bold);
-  padding: 1.125rem 2rem;
+  padding: 1.125rem;
   transition: background-color .4s;
 
 }
@@ -667,6 +672,7 @@ img {
 /*For small devices*/
 
 @media screen and (max-width: 340px) {
+ 
   .container {
     margin-inline: 1rem;
   }
@@ -705,7 +711,11 @@ img {
   }
 
 }  
-
+@media screen and (min-width: 360px){
+ .button{
+    padding: 1.125rem;
+  }
+}
 /*For medium devices*/
 
 @media screen and (min-width: 576px) {
@@ -788,6 +798,8 @@ img {
   .container {
     margin-inline: auto;
   }
+
+
 
   .section {
     padding-block: 7rem 2rem;
